@@ -1,4 +1,4 @@
-name:                yamldir
+name:                yaml-dir
 version:             0.1.0.0
 synopsis:            Directories as YAML objects
 description:         A small convenience library that reads in directory
