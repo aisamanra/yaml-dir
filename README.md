@@ -1,5 +1,6 @@
 The `yaml-dir` package lets you read in directory structures as
-though they were YAML object. Three sets of functions are exposed:
+though they were YAML objects, with file or subdirectory names as
+keys and their contents as values. Three sets of functions are exposed:
 one to treat all files as though they contain more YAML data, one
 to treat all files as YAML strings, and one to choose between the
 previous two based on file extension.
