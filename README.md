@@ -81,7 +81,7 @@ there are various other formats which are better suited to that
 purpose: if it needs to be human-readable, then
 [JSON](http://hackage.haskell.org/package/aeson) or
 [S-expressions](https://github.com/aisamanra/s-cargot)
-might be better, and if it doesn't, then a format
+might be better. If it doesn't, then a format
 like [netstrings](https://en.wikipedia.org/wiki/Netstring) or
 [bencode](http://hackage.haskell.org/package/AttoBencode) might be
 preferable.
