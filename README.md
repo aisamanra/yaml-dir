@@ -1,5 +1,6 @@
 The `yaml-dir` package lets you read in directory structures as
-though they were YAML object. Three sets of functions are exposed:
+though they were YAML objects, with file or subdirectory names as
+keys and their contents as values. Three sets of functions are exposed:
 one to treat all files as though they contain more YAML data, one
 to treat all files as YAML strings, and one to choose between the
 previous two based on file extension.
@@ -80,7 +81,7 @@ there are various other formats which are better suited to that
 purpose: if it needs to be human-readable, then
 [JSON](http://hackage.haskell.org/package/aeson) or
 [S-expressions](https://github.com/aisamanra/s-cargot)
-might be better, and if it doesn't, then a format
+might be better. If it doesn't, then a format
 like [netstrings](https://en.wikipedia.org/wiki/Netstring) or
 [bencode](http://hackage.haskell.org/package/AttoBencode) might be
 preferable.
