@@ -24,7 +24,7 @@ import           Data.Yaml
 import           System.Directory ( doesDirectoryExist
                                   , getDirectoryContents
                                   )
-import           System.FilePath ((</>))
+import           System.FilePath ((</>), takeBaseName)
 
 filterDir :: IO [String] -> IO [String]
 filterDir = fmap (filter go)
@@ -165,7 +165,8 @@ parseDir withFile path = do
   vs <- fmap sequence (mapM (parsePath withFile) [path </> k | k <- ks])
   case vs of
     Left s    -> return (Left s)
-    Right vs' -> return (Right (Object (fromList [ (pack k, v)
-                                                | k <- ks
-                                                | v <- vs'
-                                                ])))
+    Right vs' ->
+      return (Right (Object (fromList [ (pack (takeBaseName k), v)
+                                      | k <- ks
+                                      | v <- vs'
+                                      ])))
