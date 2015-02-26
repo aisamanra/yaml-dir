@@ -24,7 +24,7 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     Data.YamlDir
+  exposed-modules:     Data.Yaml.Dir
   other-extensions:    MultiWayIf, ParallelListComp
   build-depends:       base >=4.7 && <4.8,
                        unordered-containers >= 0.2 && <= 0.3,
